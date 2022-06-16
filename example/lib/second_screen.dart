@@ -27,7 +27,8 @@ class _SecondScreenState extends State<SecondScreen> {
         },
         onFailure: () {
           NavigateWithName.finish(context);
-        }, keys: ["name"]);
+        },
+        keys: ["name"]);
   }
 
   @override
