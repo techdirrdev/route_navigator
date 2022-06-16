@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:route_navigator/result.dart';
 
 /// Navigate screens with Name
@@ -40,6 +40,7 @@ class NavigateWithName {
   }
 }
 
+/// [Navigate] provide functionality for check data
 class Navigate {
   static extrasData(
       {required BuildContext context,
@@ -60,11 +61,15 @@ class Navigate {
       } else {
         if (onFailure != null) {
           onFailure();
+        } else {
+          NavigateWithName.finish(context);
         }
       }
     } else {
       if (onFailure != null) {
         onFailure();
+      } else {
+        NavigateWithName.finish(context);
       }
     }
   }
