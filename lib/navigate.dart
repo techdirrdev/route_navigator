@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/widgets.dart';
 import 'package:route_navigator/result.dart';
 
@@ -42,6 +44,7 @@ class NavigateWithName {
 
 /// [Navigate] provide functionality for check data
 class Navigate {
+  /// check data from page (if onFailure null then page finish)
   static extrasData(
       {required BuildContext context,
       required Map? data,
@@ -59,6 +62,7 @@ class Navigate {
       if (isAllKeyContains) {
         onSuccess(data);
       } else {
+        log("onFailure");
         if (onFailure != null) {
           onFailure();
         } else {
@@ -66,6 +70,7 @@ class Navigate {
         }
       }
     } else {
+      log("onFailure");
       if (onFailure != null) {
         onFailure();
       } else {
