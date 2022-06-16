@@ -1,7 +1,7 @@
 name: route_navigator
 description: This package helps to manage the navigate between screens in an elegant and easy way.
 repository: https://github.com/techdirrdev/route_navigator.git
-version: 1.1.0
+version: 1.2.0
 
 environment:
   sdk: ">=2.16.2 <3.0.0"
